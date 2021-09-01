@@ -1,0 +1,195 @@
+display_elements:
+  '1038': !TrackSectionWidget
+    ori: none
+    width: 100
+    height: 20
+    x: 50
+    y: 50
+  'A1012': !PointWidget
+    ori: se
+    width: 70
+    height: 50
+    in_ : '1038'
+    anchor: nw
+    relx: 1.0
+    rely: 0.0
+  '1012': !PointWidget
+    ori: nw
+    width: 50
+    height: 50
+    in_ : 'A1012'
+    anchor: nw
+    relx: 1.0
+    rely: 0.6
+  '1022': !PointWidget
+    ori: sw
+    width: 70
+    height: 50
+    in_ : '1012'
+    anchor: ne
+    relx: 0.0
+    rely: 0.6
+  '1041': !TrackSectionWidget
+    ori: ne
+    width: 100
+    height: 50
+    in_ : '1022'
+    anchor: ne
+    relx: 0.0
+    rely: 0.6
+  '1033': !TrackSectionWidget
+    ori: se
+    width: 100
+    height: 20
+    in_ : '1022'
+    anchor: ne
+    relx: 0.0
+    rely: 0.0
+  '1020': !TrackSectionWidget
+    ori: se
+    width: 100
+    height: 20
+    in_ : 'A1012'
+    anchor: nw
+    relx: 1.0
+    rely: 0.0
+  'A1011': !PointWidget
+    ori: sw
+    width: 70
+    height: 50
+    in_ : '1020'
+    anchor: nw
+    relx: 1.0
+    rely: 0.0
+  '1011': !PointWidget
+    ori: ne
+    width: 50
+    height: 50
+    in_ : '1012'
+    anchor: nw
+    relx: 1.0
+    rely: 0.0
+  '1009': !TrackSectionWidget
+    ori: ne
+    width: 80
+    height: 20
+    in_ : '1011'
+    anchor: sw
+    relx: 1.0
+    rely: 1.0
+
+  '1010': !TrackSectionWidget
+    ori: sw
+    width: 60
+    height: 20
+    in_ : 'A1011'
+    anchor: nw
+    relx: 1.0
+    rely: 0.0
+  '970': !TrackSectionWidget
+    ori: sw
+    width: 50
+    height: 20
+    in_ : '1010'
+    anchor: nw
+    relx: 1.0
+    rely: 0.0
+  '968': !TrackSectionWidget
+    ori: sw
+    width: 50
+    height: 20
+    in_ : '970'
+    anchor: nw
+    relx: 1.0
+    rely: 0.0
+  '958': !TrackSectionWidget
+    ori: sw
+    width: 50
+    height: 20
+    in_ : '968'
+    anchor: nw
+    relx: 1.0
+    rely: 0.0
+  '950': !TrackSectionWidget
+    ori: sw
+    width: 100
+    height: 20
+    in_ : '958'
+    anchor: nw
+    relx: 1.0
+    rely: 0.0
+  '940': !TrackSectionWidget
+    ori: sw
+    width: 80
+    height: 20
+    in_ : '950'
+    anchor: nw
+    relx: 1.0
+    rely: 0.0
+
+  '979': !TrackSectionWidget
+    ori: nw
+    width: 50
+    height: 20
+    in_ : '1009'
+    anchor: nw
+    relx: 1.0
+    rely: 0.0
+  '963': !TrackSectionWidget
+    ori: nw
+    width: 50
+    height: 20
+    in_ : '979'
+    anchor: nw
+    relx: 1.0
+    rely: 0.0
+  '951': !TrackSectionWidget
+    ori: nw
+    width: 50
+    height: 20
+    in_ : '963'
+    anchor: nw
+    relx: 1.0
+    rely: 0.0
+  '935': !TrackSectionWidget
+    ori: nw
+    width: 50
+    height: 20
+    in_ : '951'
+    anchor: nw
+    relx: 1.0
+    rely: 0.0
+  '933': !TrackSectionWidget
+    ori: nw
+    width: 100
+    height: 20
+    in_ : '935'
+    anchor: nw
+    relx: 1.0
+    rely: 0.0
+  '921': !TrackSectionWidget
+    ori: nw
+    width: 30
+    height: 20
+    in_ : '933'
+    anchor: nw
+    relx: 1.0
+    rely: 0.0
+
+  'A922': !PointWidget
+    ori: sw
+    width: 70
+    height: 50
+    in_ : '940'
+    anchor: nw
+    relx: 1.0
+    rely: 0.0
+  '922': !PointWidget
+    ori: ne
+    width: 50
+    height: 50
+    legA: 10
+    in_ : '921'
+    anchor: sw
+    relx: 1.0
+    rely: 1.0
