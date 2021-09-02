@@ -25,7 +25,7 @@ class FarstaStrandGui:
         display_widgets = self.yaml['display_elements']
 
         for name, widget in display_widgets.items():
-            widget.create_widget(name, self.frame)
+            widget.create_widget(name, self.frame, self)
         for widget in display_widgets.values():
             widget.place_widget(display_widgets)
 
