@@ -4,15 +4,11 @@ from TrackWidgetBase import Coord, TrackWidgetBase, SCALE
 
 
 class TrackSectionWidget(TrackWidgetBase):
-    def __init__(self, *, ori, width, height, **placement):
-        TrackWidgetBase.__init__(self, ori=ori, width=width, height=height, placement=placement)
+    def __init__(self, *, ori, height, width, **placement):
+        super().__init__(ori=ori, width=width, height=height, **placement)
 
     def create_widget(self, name, master_frame, gui):
         TrackWidgetBase.create_widget(self, name, master_frame, gui)
-        tk.Frame.__init__(self, self.master_frame, height=self.height, width=self.width)
-        self.canvas = tk.Canvas(self, height=self.height, width=self.width, highlightthickness=0, bg='gray75')
-        self.bind('<Any-Enter>', self.mouse_enter)
-        self.bind('<Any-Leave>', self.mouse_leave)
 
         if self.ori == 'nw':
             self.p1 = Coord(0, SCALE)
