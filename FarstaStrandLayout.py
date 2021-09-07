@@ -3,6 +3,7 @@ import yaml
 
 from PointWidget import PointWidget_constructor
 from TrackSectionWidget import TrackSectionWidget_constructor
+from SignalWidget import SignalWidget_constructor
 
 
 def get_loader():
@@ -10,6 +11,7 @@ def get_loader():
     loader = yaml.SafeLoader
     loader.add_constructor("!TrackSectionWidget", TrackSectionWidget_constructor)
     loader.add_constructor("!PointWidget", PointWidget_constructor)
+    loader.add_constructor("!SignalWidget", SignalWidget_constructor)
     return loader
 
 

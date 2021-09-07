@@ -23,8 +23,8 @@ display_elements:
     rely: 0.6
   '1022': !PointWidget
     ori: sw
-    width: 70
-    height: 50
+    width: 100
+    height: 80
     in_ : '1012'
     anchor: ne
     relx: 0.0
@@ -32,11 +32,11 @@ display_elements:
   '1041': !TrackSectionWidget
     ori: ne
     width: 100
-    height: 50
+    height: 20
     in_ : '1022'
-    anchor: ne
+    anchor: se
     relx: 0.0
-    rely: 0.6
+    rely: 1.0
   '1033': !TrackSectionWidget
     ori: se
     width: 100
@@ -77,6 +77,7 @@ display_elements:
     anchor: sw
     relx: 1.0
     rely: 1.0
+    text_y: 4
 
   '1010': !TrackSectionWidget
     ori: sw
@@ -192,4 +193,21 @@ display_elements:
     in_ : '921'
     anchor: sw
     relx: 1.0
+    rely: 1.0
+
+  '988': !SignalWidget
+    ori: nw
+    width: 40
+    height: 20
+    in_: '979'
+    anchor: sw
+    relx: 0.85
+    rely: 0.0
+  '1009,Z,VA': !SignalWidget
+    ori: se
+    width: 40
+    height: 20
+    in_: '979'
+    anchor: ne
+    relx: 0.15
     rely: 1.0
