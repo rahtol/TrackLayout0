@@ -9,6 +9,19 @@ class Coord:
         self.y = y
 
 
+def default_placement(anchor : str):
+    if anchor == 'nw':
+        return (1.0, 0.0)
+    elif anchor == 'sw':
+        return (1.0, 1.0)
+    elif anchor == 'ne':
+        return (0.0, 0.0)
+    elif anchor == 'se':
+        return (0.0, 1.0)
+    else:
+        return(0.5, 0.5)
+
+
 class TrackWidgetBase(tk.Frame):
     def __init__(self, *, ori, height, width, **placement):
         self.ori = ori
@@ -32,9 +45,17 @@ class TrackWidgetBase(tk.Frame):
     def place_widget(self, display_widgets):
         self.canvas.pack()
         if 'in_' in self.placement:
-            # placement relative to another display_object using _in, anchor, relx, rely
-            self.place(in_=display_widgets[self.placement['in_']],
-                       **{k: v for k, v in self.placement.items() if k in ('anchor', 'relx', 'rely')})
+            # placement relative to another display_object using _in, anchor, relx or x, rely or y
+            # 'anchor' specifies a coordinate of self widget, i.e. one of its corners using nw, sw, ne or se
+            # (x, y) or (relx, rely) specify a coordinate of the reference widget _in
+            # the self widget will be placed so that both coordinates align
+            if {'x', 'y', 'relx', 'rely'}.isdisjoint(self.placement.keys()):
+                # if none of the above keys is present provide defaults based on value of 'anchor'
+                (self.placement['relx'], self.placement['rely']) = default_placement(self.placement['anchor'])
+            in_ = display_widgets[self.placement['in_']]
+            symbols = {'nw': 'nw', 'ne': 'ne', 'sw': 'sw', 'se': 'se', 'in_': in_}
+            self.place(in_=in_, **{k: eval(str(v), globals(), symbols)
+                                   for k, v in self.placement.items() if k in ('anchor', 'relx', 'rely', 'x', 'y')})
         else:
             # placement using master frame coordinates
             self.place(**{k: v for k, v in self.placement.items() if k in ('x', 'y')})

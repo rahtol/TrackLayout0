@@ -11,8 +11,6 @@ display_elements:
     height: 50
     in_ : '1038'
     anchor: nw
-    relx: 1.0
-    rely: 0.0
   '1012': !PointWidget
     ori: nw
     width: 50
@@ -201,13 +199,13 @@ display_elements:
     height: 20
     in_: '979'
     anchor: sw
-    relx: 0.85
-    rely: 0.0
+    x: 'in_.width-5'
+    rely: 0
   '1009,Z,VA': !SignalWidget
     ori: se
     width: 40
     height: 20
     in_: '979'
     anchor: ne
-    relx: 0.15
+    x: 0+6
     rely: 1.0
