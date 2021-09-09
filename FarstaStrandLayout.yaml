@@ -134,22 +134,23 @@ display_elements:
     anchor: nw
   '921': !TrackSectionWidget
     ori: nw
-    width: 30
+    width: 50
     height: 20
     in_ : '933'
     anchor: nw
 
   'A922': !PointWidget
     ori: sw
-    width: 70
-    height: 50
+    width: 80
+    height: 40
+    length_legA: 40
     in_ : '940'
     anchor: nw
   '922': !PointWidget
     ori: ne
-    width: 50
-    height: 50
-    legA: 10
+    width: 110
+    height: 40
+    length_legA: 10
     in_ : '921'
     anchor: sw
 
@@ -245,14 +246,30 @@ display_elements:
 
   '914': !TrackSectionWidget
     ori: nw
-    width: 30
+    width: 50
     height: 20
     in_ : 'A922'
     anchor: nw
   '859': !TrackSectionWidget
     ori: nw
-    width: 100
+    width: 50
     height: 20
     in_ : '922'
     anchor: sw
 
+  '893': !SignalWidget
+    ori: se
+    width: 40
+    height: 20
+    in_: '914'
+    anchor: ne
+    x: 6
+    rely: 1.0
+  '911,A': !SignalWidget
+    ori: se
+    width: 40
+    height: 20
+    in_: '859'
+    anchor: ne
+    x: 6
+    rely: 1.0
