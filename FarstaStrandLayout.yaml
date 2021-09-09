@@ -33,48 +33,36 @@ display_elements:
     height: 20
     in_ : '1022'
     anchor: se
-    relx: 0.0
-    rely: 1.0
   '1033': !TrackSectionWidget
     ori: se
     width: 100
     height: 20
     in_ : '1022'
     anchor: ne
-    relx: 0.0
-    rely: 0.0
   '1020': !TrackSectionWidget
     ori: se
     width: 100
     height: 20
     in_ : 'A1012'
     anchor: nw
-    relx: 1.0
-    rely: 0.0
   'A1011': !PointWidget
     ori: sw
     width: 70
     height: 50
     in_ : '1020'
     anchor: nw
-    relx: 1.0
-    rely: 0.0
   '1011': !PointWidget
     ori: ne
     width: 50
     height: 50
     in_ : '1012'
     anchor: nw
-    relx: 1.0
-    rely: 0.0
   '1009': !TrackSectionWidget
     ori: ne
     width: 80
     height: 20
     in_ : '1011'
     anchor: sw
-    relx: 1.0
-    rely: 1.0
     text_y: 4
 
   '1010': !TrackSectionWidget
@@ -83,48 +71,36 @@ display_elements:
     height: 20
     in_ : 'A1011'
     anchor: nw
-    relx: 1.0
-    rely: 0.0
   '970': !TrackSectionWidget
     ori: sw
     width: 50
     height: 20
     in_ : '1010'
     anchor: nw
-    relx: 1.0
-    rely: 0.0
   '968': !TrackSectionWidget
     ori: sw
     width: 50
     height: 20
     in_ : '970'
     anchor: nw
-    relx: 1.0
-    rely: 0.0
   '958': !TrackSectionWidget
     ori: sw
     width: 50
     height: 20
     in_ : '968'
     anchor: nw
-    relx: 1.0
-    rely: 0.0
   '950': !TrackSectionWidget
     ori: sw
     width: 100
     height: 20
     in_ : '958'
     anchor: nw
-    relx: 1.0
-    rely: 0.0
   '940': !TrackSectionWidget
     ori: sw
     width: 80
     height: 20
     in_ : '950'
     anchor: nw
-    relx: 1.0
-    rely: 0.0
 
   '979': !TrackSectionWidget
     ori: nw
@@ -132,48 +108,36 @@ display_elements:
     height: 20
     in_ : '1009'
     anchor: nw
-    relx: 1.0
-    rely: 0.0
   '963': !TrackSectionWidget
     ori: nw
     width: 50
     height: 20
     in_ : '979'
     anchor: nw
-    relx: 1.0
-    rely: 0.0
   '951': !TrackSectionWidget
     ori: nw
     width: 50
     height: 20
     in_ : '963'
     anchor: nw
-    relx: 1.0
-    rely: 0.0
   '935': !TrackSectionWidget
     ori: nw
     width: 50
     height: 20
     in_ : '951'
     anchor: nw
-    relx: 1.0
-    rely: 0.0
   '933': !TrackSectionWidget
     ori: nw
     width: 100
     height: 20
     in_ : '935'
     anchor: nw
-    relx: 1.0
-    rely: 0.0
   '921': !TrackSectionWidget
     ori: nw
     width: 30
     height: 20
     in_ : '933'
     anchor: nw
-    relx: 1.0
-    rely: 0.0
 
   'A922': !PointWidget
     ori: sw
@@ -181,8 +145,6 @@ display_elements:
     height: 50
     in_ : '940'
     anchor: nw
-    relx: 1.0
-    rely: 0.0
   '922': !PointWidget
     ori: ne
     width: 50
@@ -190,8 +152,6 @@ display_elements:
     legA: 10
     in_ : '921'
     anchor: sw
-    relx: 1.0
-    rely: 1.0
 
   '988': !SignalWidget
     ori: nw
@@ -209,3 +169,90 @@ display_elements:
     anchor: ne
     x: 0+6
     rely: 1.0
+
+  '1030,Z,VA': !SignalWidget
+    ori: nw
+    width: 40
+    height: 20
+    in_: '1038'
+    anchor: sw
+    x: 'in_.width-5'
+    rely: 0.0
+  '1032,Z,VA': !SignalWidget
+    ori: nw
+    width: 40
+    height: 20
+    in_: '1033'
+    anchor: sw
+    x: 'in_.width-5'
+    rely: 0.0
+  '1040': !SignalWidget
+    ori: nw
+    width: 40
+    height: 20
+    in_: '1041'
+    anchor: sw
+    x: 'in_.width-35'
+    rely: 0.0
+  '1025,Z,VA': !SignalWidget
+    ori: se
+    width: 40
+    height: 20
+    in_: '1012'
+    anchor: ne
+    x: 6
+    rely: 1.0
+  '1007': !SignalWidget
+    ori: se
+    width: 40
+    height: 20
+    in_: '1010'
+    anchor: ne
+    x: 6
+    rely: 1.0
+  '957': !SignalWidget
+    ori: se
+    width: 40
+    height: 20
+    in_: '950'
+    anchor: ne
+    x: 6
+    rely: 1.0
+  '935,A': !SignalWidget
+    ori: se
+    width: 40
+    height: 20
+    in_: '933'
+    anchor: ne
+    x: 6
+    rely: 1.0
+  '940,A': !SignalWidget
+    ori: nw
+    width: 40
+    height: 20
+    in_: '950'
+    anchor: sw
+    x: 'in_.width-5'
+    rely: 0.0
+  '920': !SignalWidget
+    ori: nw
+    width: 40
+    height: 20
+    in_: '933'
+    anchor: sw
+    x: 'in_.width-5'
+    rely: 0.0
+
+  '914': !TrackSectionWidget
+    ori: nw
+    width: 30
+    height: 20
+    in_ : 'A922'
+    anchor: nw
+  '859': !TrackSectionWidget
+    ori: nw
+    width: 100
+    height: 20
+    in_ : '922'
+    anchor: sw
+
