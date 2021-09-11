@@ -38,7 +38,7 @@ class TrackWidgetBase(tk.Frame):
         self.master_frame = master_frame
         self.gui = gui
         tk.Frame.__init__(self, self.master_frame, height=self.height, width=self.width)
-        self.canvas = tk.Canvas(self, height=self.height, width=self.width, highlightthickness=0)
+        self.canvas = tk.Canvas(self, height=self.height, width=self.width, highlightthickness=0, bg='gray85')
         self.bind('<Any-Enter>', self.mouse_enter)
         self.bind('<Any-Leave>', self.mouse_leave)
 

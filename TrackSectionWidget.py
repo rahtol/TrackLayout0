@@ -9,6 +9,7 @@ class TrackSectionWidget(TrackWidgetBase):
 
     def create_widget(self, name, master_frame, gui):
         TrackWidgetBase.create_widget(self, name, master_frame, gui)
+#        self.canvas.configure(bg='gray85')
 
         if self.ori == 'nw':
             self.p1 = Coord(0, SCALE)

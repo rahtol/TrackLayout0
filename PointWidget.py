@@ -30,6 +30,7 @@ class PointWidget(TrackWidgetBase):
     def create_widget(self, name, master_frame, gui):
         TrackWidgetBase.create_widget(self, name, master_frame, gui)
         self.length_legA = self.placement.get('length_legA', self.width-self.height+20)
+#        self.canvas.configure(bg='gray65')
 
         if self.ori == 'ne':
             self.mk_coords(self.idle_xy, self.idle_xy)
