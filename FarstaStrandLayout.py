@@ -18,19 +18,19 @@ def get_loader():
 class FarstaStrandGui:
     def __init__(self, master):
         self.master = master
+        self.master.geometry('1900x400')
         self.frame0 = tk.Frame(self.master)
-
-        self.canvas = tk.Canvas(self.frame0, height=400, width=1900, highlightthickness=0)
-        self.frame = tk.Frame(self.canvas, height=400, width=3800, bg='gray85')
+        self.frame0.pack(fill='both', expand=True)
+        self.canvas = tk.Canvas(self.frame0, highlightthickness=0, bg='gray80')
         self.hsb = tk.Scrollbar(self.frame0, orient="horizontal", command=self.canvas.xview)
         self.canvas.configure(xscrollcommand=self.hsb.set)
         self.hsb.pack(side="bottom", fill="x")
         self.canvas.pack(side="top", fill="both", expand=True)
+        self.frame = tk.Frame(self.canvas, height=400, width=3800, bg='gray85')
         self.canvas.create_window((0,0), window=self.frame, anchor="nw", tags="self.frame")
         self.frame.bind("<Configure>", self.onFrameConfigure)
-        self.frame0.pack()
         self.canvas.configure(scrollregion=self.canvas.bbox("all"))
-        self.canvas.xview_moveto(1.0)
+        self.canvas.xview_moveto(0.25)
 
         master.title("Farsta Strand Gui #2")
 
